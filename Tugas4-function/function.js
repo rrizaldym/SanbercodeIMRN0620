@@ -2,9 +2,10 @@
 console.log('No. 1');
 
 function teriak(){
-    console.log("Halo Sanbers!")
+    return "Halo Sanbers!"
 }
-teriak();
+
+console.log(teriak())
 
 console.log('');
 //No. 2
