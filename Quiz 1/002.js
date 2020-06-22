@@ -110,6 +110,30 @@ function ConditionalAscDesc(reference, check) {
 
 function ularTangga() {
   // Tulis code kamu di sini
+  var arr = []
+  var start = 100
+  var end = start-10
+  while(start!=0){
+      switch(true){
+          case(true):
+              for(start; start > end; start--){
+                  arr.push(start)                
+              }            
+              console.log(arr.join(' '))            
+              arr.splice(0,10)
+              newstart = end - 9
+          case(true):
+              for(newstart; newstart <= end; newstart++){
+                  arr.push(newstart)
+              }
+              console.log(arr.join(' '))
+              arr.splice(0,10)
+          default:
+              start = end - 10
+              end = start - 10 
+      }
+  }    
+  return ''
 }
 
 // TEST CASES Ascending Ten
