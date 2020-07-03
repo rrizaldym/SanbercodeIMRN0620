@@ -4,7 +4,6 @@ import{
     Text,
     View,
     Image,
-    ScrollView,
     TouchableOpacity
 } from 'react-native';
 //import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -13,7 +12,7 @@ import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 export default class App extends React.Component{
     render(){
         return(
-            <ScrollView style={styles.container}>
+            <View style={styles.container}>
                     <View style={styles.title}>
                         <Text style={styles.titleText}>Tentang Saya</Text>
                         <Image source={require('./images/IMG_20181230_091832_679.jpg')} style={styles.pp} />
@@ -52,7 +51,7 @@ export default class App extends React.Component{
                             </TouchableOpacity>
                         </View>                    
                     </View>                
-            </ScrollView>
+            </View>
         )
     }
 }
@@ -60,16 +59,13 @@ export default class App extends React.Component{
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#fff',
-        //alignItems: 'center',
-        //justifyContent: 'center',
-        //justifyContent:'space-evenly',      
+        justifyContent:'space-evenly',        
     },
     title:{
         //marginTop:64,
         alignItems:'center',
-        justifyContent:'space-evenly',
-        margin:20,        
+        justifyContent:'space-between',
+        //margin:20,        
     },
     pp:{
         width:200,
@@ -99,7 +95,7 @@ const styles = StyleSheet.create({
         borderRadius:16,
         backgroundColor:'#efefef',
         alignSelf:'center',
-        margin:5,
+        //margin:10,
     },
     item:{
         alignItems: 'center',
@@ -139,7 +135,6 @@ const styles = StyleSheet.create({
         borderRadius:16,
         backgroundColor:'#efefef',
         alignSelf:'center',
-        margin:5,
     },
     listHubunginSaya:{
         borderTopColor:'#003366',

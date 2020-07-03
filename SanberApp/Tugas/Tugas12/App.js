@@ -5,6 +5,7 @@ import {
     View,
     Text,
     Image,
+    StatusBar,
     TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -13,9 +14,12 @@ import data from './data.json';
 
 export default class App extends React.Component{
     render(){
-        alert(data.kind);
+        //alert(data.kind);
         return(
             <View style = {styles.container}>
+                <View style={styles.statusBar}>
+                    <StatusBar translucent={false} backgroundColor={"grey"} />
+                </View>
                 <View style= {styles.navBar}>
                     <TouchableOpacity>
                         <Image source={require('./images/logo.png')} style={{width:98, height:22}} />
@@ -60,11 +64,12 @@ export default class App extends React.Component{
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
+        flex: 1
         //backgroundColor: '#fff',
         //alignItems: 'center',
         //justifyContent: 'center',
     },
+    
     navBar: {
         height: 55,
         backgroundColor: 'white',
@@ -72,7 +77,10 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         flexDirection: 'row',
         alignItems:'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderBottomWidth: 0.5,
+        borderColor: '#e5e5e5'
+
     },
     rightNav: {
         flexDirection: 'row'
