@@ -75,12 +75,16 @@ const data = [
 function viewScores(data, subject) {
   // code kamu di sini
   let arr = []
-  for(i2=0;subject===data[0][i2];i2++){
-    var quiz = i2
-    console.log(quiz)
+  for(i2=0;i2<4;i2++){
+    if (subject===data[0][i2]){
+      var quiz = i2
+      //console.log(quiz)
+    }    
   }
-  console.log(data[0][0])
-  
+  for(i1=1;i1<data.length;i1++){
+    arr.Email = data[i1][0]
+  }
+  console.log(arr)
 }
 
 // TEST CASE
